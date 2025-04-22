@@ -1,18 +1,18 @@
 # 🤖 UR5e Warehouse Expiry Detection System
 
-This ROS 2 project implements a semi-automated warehouse management system using a **Universal Robots UR5e** robotic arm and a **camera-based OCR system** to identify expired products on a shelf and remove them. The goal is to simulate and deploy an intelligent robotic assistant that helps manage inventory by checking expiry dates and physically handling outdated stock.
+A ROS 2-based warehouse automation system where a UR5e robot uses a camera mounted on its gripper to detect expired products via OCR and push them off the shelf.
 
 ---
 
 ## 🧠 Project Overview
 
-In warehouse environments, expired goods are a critical issue. This system leverages **robot vision**, **robot motion planning**, and **custom URDF modeling** to automate part of this inspection process:
+In warehouse environments, expired goods are a critical issue. This system leverages **robot vision**, **motion planning using MoveIt**, and **custom URDF modeling** to automate part of this inspection process:
 
-1. A camera observes product labels on a shelf.
+1. A camera mounted on the robot's gripper observes product labels on a shelf.
 2. OCR is used to detect printed expiry dates.
 3. If the date is expired, a Python node sends movement commands to the UR5e.
-4. The robot arm pushes the expired box off the shelf.
-5. The system can be tested and visualized in **RViz**, or deployed in a real lab setup.
+4. The robot arm plans and executes a trajectory to push the expired box off the shelf.
+5. The system is visualized and debugged using **RViz**, and motion planning is powered by **MoveIt**.
 
 ---
 
@@ -75,7 +75,7 @@ project_ws/
 
 ## 🛠️ Technologies Used
 
-- ROS 2 (Humble or compatible)
+- ROS 2 (Humble )
 - URDF / Xacro for robot and environment modeling
 - RViz for robot simulation and visualization
 - Tesseract OCR or OpenCV (Python-based vision)
