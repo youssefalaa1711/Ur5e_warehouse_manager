@@ -34,27 +34,6 @@ This is the actual physical setup used in the robotics lab. The UR5e is mounted 
 
 ---
 
-## 🗂️ Project Folder Structure
-
-```
-project_ws/
-├── src/
-│   └── ur5e_robot/               # ROS 2 Package
-│       ├── ur5e_robot/           # Python nodes (camera, move control, OCR logic)
-│       ├── test/                 # Python lint and format tests
-│       ├── resource/             # Package resources
-│       ├── package.xml           # Package manifest
-│       └── setup.py              # Build instructions
-├── ur_macro.xacro                # Macro to define URDF robot/environment
-├── urdf modified backup/         # Real-world inspired URDF with shelf and inverted arm
-├── Rviz_commands/                # Saved commands or RViz config used to simulate the system
-└── docs/
-    ├── simulation_image.png
-    └── real_setup_image.jpeg
-```
-
----
-
 ## ⚙️ System Workflow
 
 1. **OCR Node**:
